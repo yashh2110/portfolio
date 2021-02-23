@@ -1,0 +1,21 @@
+.social ul {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.social li {
+  margin: 5px;
+}
+.social {
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .social {
+    padding: 5px;
+  }
+  .social ul {
+    justify-content: center;
+    align-items: center;
+  }
+}

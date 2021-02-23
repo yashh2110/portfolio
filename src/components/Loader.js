@@ -62,7 +62,7 @@ function Loader() {
             duration:2
         },"-=1.5");
         tl.to(loader_ref.current,{
-            y:window.innerHeight * -1,
+            y:window.innerHeight * -10,
             duration:2
         },"-=0.5");
     }
