@@ -54,6 +54,10 @@ function Loader() {
             y:window.innerHeight * -1,
             duration:2
         },"-=1.5");
+        tl.to(loader_ref.current,{
+            y:window.innerHeight * -1,
+            duration:2
+        },"-=0.5");
     },[])
     return (
         <div ref={loader_ref} className="loader">
