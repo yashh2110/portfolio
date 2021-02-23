@@ -5,7 +5,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import TextPlugin from "gsap/TextPlugin";
 import prof from "../images/prof.svg"
 import Social from './Social';
-import About from './about';
 function Main() {
 
     const curser= useRef(null);
