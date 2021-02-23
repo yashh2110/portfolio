@@ -54,7 +54,7 @@ function Loader() {
             y:window.innerHeight * -1,
             duration:2
         },"-=1.5");
-    })
+    },[])
     return (
         <div ref={loader_ref} className="loader">
             <div ref={loader_window1} className="loader_window"></div>
@@ -63,7 +63,7 @@ function Loader() {
             <p ref={hello_txt_ref} className="hello_txt">Hello There</p>
             <p ref={name_txt_ref} className="hello_txt">I Am Yashwanth Muddana</p>
             <p ref={welcome_txt_ref} className="hello_txt">Lets Gooooo.....</p>
-            <img class="loader_img" ref={loader_img_ref} src={loader_img} alt="hello there"/>
+            <img className="loader_img" ref={loader_img_ref} src={loader_img} alt="hello there"/>
         </div>
     )
 }

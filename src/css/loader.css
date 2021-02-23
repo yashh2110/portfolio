@@ -17,6 +17,7 @@
   width: 33.33%;
   height: 100vh;
   background-color: rgb(224, 231, 238);
+  border: none;
 }
 .loader_img {
   position: absolute;
@@ -42,5 +43,14 @@
     letter-spacing: 1px;
     top: 30%;
     font-size: 1.5em;
+  }
+  .loader_window {
+    width: 100%;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(224, 231, 238);
+    border: none;
   }
 }

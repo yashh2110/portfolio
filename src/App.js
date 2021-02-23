@@ -1,11 +1,24 @@
-import React from 'react'
+import React,{useEffect,useRef} from 'react'
 import Loader from './components/Loader'
-
+import Main from "./components/Main";
+import gsap from "gsap";
+import "./css/app.css";
 function App() {
+    const curser= useRef(null);
+    useEffect(()=>{
+        const id_curser=document.getElementById("curser");
+        window.addEventListener("mousemove",(e)=>{
+            curser.current.style.left=e.clientX + "px";
+            curser.current.style.top=e.clientY + "px";
+
+        })
+
+    })
     return (
         <div className="app">
+            <div ref={curser} id="curser" className="curser"></div>
             <Loader/>
-            hello mann
+            <Main />
         </div>
     )
 }
