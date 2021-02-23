@@ -13,6 +13,7 @@ function Loader() {
     const name_txt_ref= useRef(null);
     const welcome_txt_ref= useRef(null);
     useEffect(()=>{
+        const mql = window.matchMedia('screen and (max-width: 768px)');
         const tl =gsap.timeline({ease:"power3"});
         tl.from(loader_img_ref.current,{
             x:window.innerWidth * -1,
@@ -42,6 +43,12 @@ function Loader() {
         tl.to(loader_img_ref.current,{
             opacity:0
         });
+        if(mql.matches){
+            tl.to(loader_ref.current,{
+                y:window.innerHeight * -1,
+                duration:2
+            },"-=0.5");
+        }else{
         tl.to(loader_window1.current,{
             y:window.innerHeight * -1,
             duration:2
@@ -58,6 +65,7 @@ function Loader() {
             y:window.innerHeight * -1,
             duration:2
         },"-=0.5");
+    }
     },[])
     return (
         <div ref={loader_ref} className="loader">
