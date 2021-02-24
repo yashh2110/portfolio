@@ -42,25 +42,19 @@ function Loader() {
         },"+=1")
         tl.to(loader_img_ref.current,{
             opacity:0
-        });
+        },"-=1");
         if(mql.matches){
             tl.to(loader_ref.current,{
                 y:window.innerHeight * -1,
                 duration:2
             },"-=0.5");
         }else{
-        tl.to(loader_window1.current,{
+        tl.to(".loader_window",{
             y:window.innerHeight * -1,
-            duration:1
+            duration:1,
+            stagger:0.2
         },"-=1");
-        tl.to(loader_window2.current,{
-            y:window.innerHeight * -1,
-            duration:1
-        },"-=0.7");
-        tl.to(loader_window3.current,{
-            y:window.innerHeight * -1,
-            duration:1
-        },"-=0.7");
+
         tl.to(loader_ref.current,{
             y:window.innerHeight * -10,
             duration:1

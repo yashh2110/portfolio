@@ -16,6 +16,7 @@ import php from "../images/php.svg"
 import sql from "../images/sql.svg"
 import python from "../images/python.svg"
 import prof from "../images/prof.svg"
+import down from "../images/down.svg"
 import Social from './Social';
 import Tilt from 'react-parallax-tilt';
 // import Skills from './skills';
@@ -24,7 +25,7 @@ function Main() {
 
     
     useEffect(()=>{
-        const screen = window.matchMedia('screen and (max-width:768px)');
+        const screen = window.matchMedia('screen and (max-width:1024px)');
         // plugins
         gsap.registerPlugin(TextPlugin);
         gsap.registerPlugin(ScrollTrigger);
@@ -32,7 +33,7 @@ function Main() {
         // main txt word array
         const words =[" Full Stack Web Developer."," UI/UX Designer."," Freelancer."," Student."];
         gsap.to('.blinker',{opacity:0,duration:0.8,repeat:-1})
-        const texttl = gsap.timeline({repeat:-1,delay:12});
+        const texttl = gsap.timeline({repeat:-1,delay:10});
         // gsap.from('.profile',{opacity:0,x: window.innerWidth * 1,scale:0,duration:2,ease:"back",delay:12})
         words.forEach(word=>{
             let tl = gsap.timeline({repeat:1,yoyo:true,repeatDelay:2});
@@ -51,26 +52,28 @@ function Main() {
                     end:"bottom -200px"
                 },
             })
+            s_tl.to('.scroll-indicator',{opacity:0})
             s_tl.to(".main_info",{x:window.innerWidth * -1,duration:2,ease:"linear"})
             if(screen.matches){
                 s_tl.to(".profile",{opacity:0,duration:2,ease:"linear"},"-=1");
             }else{
                 s_tl.to(".profile",{x:-(window.innerWidth-600),scale:1.2,duration:2,ease:"linear"},"-=1");
             }
+            // s_tl.to(".main",{background:"#333",duration:2,ease:"linear"},"-=1")
             s_tl.from(".about",{x:(window.innerWidth * 1),duration:2,ease:"linear"},"-=1")
             s_tl.from(".about_head",{width:100,opacity:0,duration:2,ease:"linear"},"-=1")
             s_tl.from(".about_txt",{x:window.innerWidth * 1,opacity:0,duration:2,ease:"linear"})
-            s_tl.from(".skills",{y:window.innerHeight * 1,duration:2,ease:"linear"},"+=5")
-            s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=2")
-            s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"power3"},"-=5")
+            s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=5")
+            s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=5")
+            s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"power2"},"-=5")
             s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power3"},"-=5")
             if(screen.matches){
-                s_tl.to(".skills",{y:-(window.innerHeight),duration:5,ease:"linear"},"+=1")
+                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"})
+                s_tl.to(".skills",{y:-(window.innerHeight),duration:2,ease:"linear"},"-=7")
             }else{
-            s_tl.to(".skill_item",{yPercent:-(window.innerHeight),scale:2,duration:5,stagger:1,ease:"linear"},"+=2")
-
+                s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"})
+                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=10")
             }
-
         },9000)
 
     },[])
@@ -87,13 +90,18 @@ function Main() {
                     <span className="blinker">_</span>
                 </p>
             </div>
+            <div className="scroll-indicator">
+                {/* <div className="scroll_dot"></div> */}
+                <img src={down} className="scroll_ind_sec" alt="scroll"/>
+                <img src={down} className="scroll_ind_main" alt="scroll"/>
+            </div>
             <div className="about" >
                 <p className="about_head">About Me</p>
                 <p className="about_txt" id="about">Hi, I am Yashwanth Muddana, I am a full stack web developer, UI/UX designer, and a freelancer, I am enthusiastic towards growing technologies, I am very happy to connect the bridge between people by making businesses online. I am highly experienced in designing websites and developing them, I am looking forward to work with any who makes the day to day life better. I am learning app development and I am very much intrested in artificial intelligence. I am a 2nd year student at VIT University Vellore India. </p>
             </div>
             <div className="skills" id="skills">
                 <p className="skill_head">Skills</p>
-                <div className="skill_items">
+                <div className="skill_items" >
                     <Tilt className="skill_item  f4"     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
@@ -228,7 +236,10 @@ function Main() {
                     </Tilt>
                 </div>
             </div>
-            <div className="contact"></div>
+            <div className="contact">
+                <p className="contact_head">Contact Me</p>
+                <p className="contact_txt">Want to make your bussiness online with website? Yeah Your on the right place. I can build your ideas into a perfect website with reasonable prices. Your satisfaction is my priority. </p>
+            </div>
             <Social />
         </div>
     )

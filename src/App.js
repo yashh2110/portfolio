@@ -18,7 +18,6 @@ function App() {
     })
     return (
         <div className="app">
-
             <Loader/>
             <Nav />
             <Main />   
