@@ -10,10 +10,10 @@ function App() {
     
     useEffect(() =>{
         window.addEventListener("mousemove",(e)=>{
-            curser.current.style.left=e.clientX + "px";
-            curser.current.style.top=e.clientY + "px";
-            curser_ref.current.style.left=e.clientX + "px";
-            curser_ref.current.style.top=e.clientY + "px";
+            // curser.current.style.left=e.clientX + "px";
+            // // curser.current.style.top=e.clientY + "px";
+            // curser_ref.current.style.left=e.clientX + "px";
+            // curser_ref.current.style.top=e.clientY + "px";
         })
     })
     return (
@@ -21,9 +21,9 @@ function App() {
             <Loader/>
             <Nav />
             <Main />   
-            <div ref={curser_ref} className="curser_dot"></div>
-            <div ref={curser} id="curser" className="curser">
-            </div> 
+            {/* <div ref={curser_ref} className="curser_dot"></div> */}
+            {/* <div ref={curser}  className="curser"> */}
+            {/* </div>  */}
         </div>
     )
 }

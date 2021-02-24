@@ -17,6 +17,8 @@ import sql from "../images/sql.svg"
 import python from "../images/python.svg"
 import prof from "../images/prof.svg"
 import down from "../images/down.svg"
+import mail from "../images/mail.svg"
+import call from "../images/call.svg"
 import Social from './Social';
 import Tilt from 'react-parallax-tilt';
 // import Skills from './skills';
@@ -66,9 +68,9 @@ function Main() {
             s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=5")
             s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=5")
             s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"power2"},"-=5")
-            s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power3"},"-=5")
+            s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power2"},"-=6")
             if(screen.matches){
-                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"})
+                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=1")
                 s_tl.to(".skills",{y:-(window.innerHeight),duration:2,ease:"linear"},"-=7")
             }else{
                 s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"})
@@ -102,135 +104,123 @@ function Main() {
             <div className="skills" id="skills">
                 <p className="skill_head">Skills</p>
                 <div className="skill_items" >
-                    <Tilt className="skill_item  f4"     
+                    <Tilt className="skill_item  "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={html} alt="html"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={css} alt="css"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={js} alt="js"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={bootstrap} alt="bootstrap"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={mui} alt="mui"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={react} alt="react"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={node} alt="node"/>
                     </Tilt>
-                    <Tilt className="skill_item f4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={express} alt="express"/>
                     </Tilt>
-                    <Tilt className="skill_item s4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={mdb} alt="mdb"/>
                     </Tilt>
-                    <Tilt className="skill_item s4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={php} alt="php"/>
                     </Tilt>
-                    <Tilt className="skill_item s4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={sql} alt="sql"/>
                     </Tilt>
-                    <Tilt className="skill_item s4"     
+                    <Tilt className="skill_item "     
                     tiltMaxAngleX={30}
                     tiltMaxAngleY={30}
                     perspective={800}
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    scale={1.1}
                     gyroscope={true}>
                         <img src={python} alt="python"/>
                     </Tilt>
@@ -238,7 +228,20 @@ function Main() {
             </div>
             <div className="contact">
                 <p className="contact_head">Contact Me</p>
-                <p className="contact_txt">Want to make your bussiness online with website? Yeah Your on the right place. I can build your ideas into a perfect website with reasonable prices. Your satisfaction is my priority. </p>
+                <p className="contact_txt">Want to make your bussiness online with website? Yeah Your on the right place. I can build your ideas into a perfect website with reasonable price. Your satisfaction is my priority. You can contact me through these below. </p>
+                <div className="contact_items">
+                <a href="mailto:muddana.yashwanth@gmail.com"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45} gyroscope={true} perspective={1000} >
+                    <img src={mail} alt="gmail"/>
+                    <p>muddana.yashwanth@gmail.com</p>
+                </Tilt>
+                </a>
+                <a href="tel:9347451840"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45} gyroscope={true} perspective={1000} >
+                    <img src={call} alt="gmail"/>
+                    <p>9347451840</p>
+                </Tilt></a>
+                </div>
+
+
             </div>
             <Social />
         </div>

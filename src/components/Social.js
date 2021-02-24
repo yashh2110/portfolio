@@ -10,12 +10,11 @@ function Social() {
     return (
         <div className="social">
             <ul>
-                <li className="social-item"><a href=""><img src={fb} alt="fb"/></a></li>
-                <li className="social-item"><a href=""><img src={github} alt="github"/></a></li>
-                <li className="social-item"><a href=""><img src={linkedin} alt="linkedin"/></a></li>
-                <li className="social-item"><a href=""><img src={email} alt="email"/></a></li>
-                <li className="social-item"><a href=""><img src={telegram} alt="telegram"/></a></li>
-                <li className="social-item"><a href=""><img src={insta} alt="insta"/></a></li>
+                <li className="social-item"><a href="https://github.com/yashh2110"><img src={github} alt="github"/></a></li>
+                <li className="social-item"><a href="https://www.linkedin.com/in/yashwanth2110/"><img src={linkedin} alt="linkedin"/></a></li>
+                <li className="social-item"><a href="mailto:muddana.yashwanth@gmail.com"><img src={email} alt="email"/></a></li>
+                <li className="social-item"><a href="https://t.me/joinchat/r4rMyGThnOk2OWZl"><img src={telegram} alt="telegram"/></a></li>
+                <li className="social-item"><a href="https://www.instagram.com/yashh2110/"><img src={insta} alt="insta"/></a></li>
             </ul>
         </div>
     )

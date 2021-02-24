@@ -53,7 +53,7 @@ function Loader() {
             y:window.innerHeight * -1,
             duration:1,
             stagger:0.2
-        },"-=1");
+        });
 
         tl.to(loader_ref.current,{
             y:window.innerHeight * -10,
@@ -66,9 +66,9 @@ function Loader() {
             <div ref={loader_window1} className="loader_window"></div>
             <div ref={loader_window2} className="loader_window"></div>
             <div ref={loader_window3} className="loader_window"></div>
-            <p ref={hello_txt_ref} className="hello_txt">Hello There</p>
-            <p ref={name_txt_ref} className="hello_txt">I Am Yashwanth Muddana</p>
-            <p ref={welcome_txt_ref} className="hello_txt">Lets Gooooo.....</p>
+            <p ref={hello_txt_ref} className="hello_txt">Hi there..👋.</p>
+            <p ref={name_txt_ref} className="hello_txt">Mask Matters Now</p>
+            <p ref={welcome_txt_ref} className="hello_txt">Lets Dive In.</p>
             <img className="loader_img" ref={loader_img_ref} src={loader_img} alt="hello there"/>
         </div>
     )
