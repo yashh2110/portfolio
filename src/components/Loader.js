@@ -39,7 +39,8 @@ function Loader() {
         },"-=0.5")
         tl.to(welcome_txt_ref.current,{
             x:window.innerWidth * -1,
-        },"-=1")
+            opacity:0,duration:1
+        })
         tl.to(loader_img_ref.current,{
             opacity:0
         },"-=1");

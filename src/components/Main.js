@@ -81,7 +81,7 @@ function Main() {
                 s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"})
                 s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=10")
             }
-        },9000)
+        },7000)
 
     },[])
     return (
