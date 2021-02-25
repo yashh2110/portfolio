@@ -31,7 +31,8 @@ function Main() {
         // plugins
         gsap.registerPlugin(TextPlugin);
         gsap.registerPlugin(ScrollTrigger);
-
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
         // main txt word array
         const words =[" Full Stack Web Developer."," UI/UX Designer."," Freelancer."," Student."];
         gsap.to('.blinker',{opacity:0,duration:0.8,repeat:-1})
