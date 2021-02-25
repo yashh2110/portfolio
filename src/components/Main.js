@@ -53,26 +53,31 @@ function Main() {
                     pin:true,
                     end:"bottom -200px"
                 },
-            })
-            s_tl.to('.scroll-indicator',{opacity:0})
-            s_tl.to(".main_info",{x:window.innerWidth * -1,duration:2,ease:"linear"})
+            })    
+
+            // if(screen.matches){
+            //     s_tl.to(".profile",{opacity:0,duration:2,ease:"linear"},"-=1");
+            // }else{
+            // }
+            // // s_tl.to(".main",{background:"#333",duration:2,ease:"linear"},"-=1")
             if(screen.matches){
-                s_tl.to(".profile",{opacity:0,duration:2,ease:"linear"},"-=1");
+                s_tl.from(".about",{y:(window.innerHeight* 1),duration:5,ease:"linear"})
+                s_tl.to(".home",{y:-(window.innerHeight* 1),opacity:0,duration:6,ease:"linear"},"-=5")
+                s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=1")
+                s_tl.to(".about",{y:-(window.innerHeight* 1),opacity:0,duration:8,ease:"linear"},"-=7")
+                s_tl.to(".skills",{y:-(window.innerHeight * 1),duration:8,ease:"linear"},"-=1")                
+                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=1")
             }else{
+                s_tl.to('.scroll-indicator',{opacity:0})
+                s_tl.to(".main_info",{x:window.innerWidth * -1,duration:2,ease:"linear"})
                 s_tl.to(".profile",{x:-(window.innerWidth-600),scale:1.2,duration:2,ease:"linear"},"-=1");
-            }
-            // s_tl.to(".main",{background:"#333",duration:2,ease:"linear"},"-=1")
-            s_tl.from(".about",{x:(window.innerWidth * 1),duration:2,ease:"linear"},"-=1")
-            s_tl.from(".about_head",{width:100,opacity:0,duration:2,ease:"linear"},"-=1")
-            s_tl.from(".about_txt",{x:window.innerWidth * 1,opacity:0,duration:2,ease:"linear"})
-            s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=5")
-            s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=5")
-            s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"power2"},"-=5")
-            s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power2"},"-=6")
-            if(screen.matches){
-                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=1")
-                s_tl.to(".skills",{y:-(window.innerHeight),duration:2,ease:"linear"},"-=7")
-            }else{
+                s_tl.from(".about",{x:(window.innerWidth * 1),duration:2,ease:"linear"},"-=1")
+                s_tl.from(".about_head",{width:100,opacity:0,duration:2,ease:"linear"},"-=1")
+                s_tl.from(".about_txt",{x:window.innerWidth * 1,opacity:0,duration:2,ease:"linear"})
+                s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=5")
+                s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=5")
+                s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"power2"},"-=5")
+                s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power2"},"-=6")
                 s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"})
                 s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=10")
             }
@@ -81,6 +86,7 @@ function Main() {
     },[])
     return (
         <div className="main" > 
+            <div className="home">
             <div className="profile">
                     <img src={prof} alt="me"></img>
             </div> 
@@ -91,11 +97,15 @@ function Main() {
                     <span className="iam_txt"></span>
                     <span className="blinker">_</span>
                 </p>
+
             </div>
+            
             <div className="scroll-indicator">
                 {/* <div className="scroll_dot"></div> */}
                 <img src={down} className="scroll_ind_sec" alt="scroll"/>
                 <img src={down} className="scroll_ind_main" alt="scroll"/>
+            </div>
+
             </div>
             <div className="about" >
                 <p className="about_head">About Me</p>
@@ -111,7 +121,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={html} alt="html"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -121,7 +131,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={css} alt="css"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -131,7 +141,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={js} alt="js"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -141,7 +151,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={bootstrap} alt="bootstrap"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -151,7 +161,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={mui} alt="mui"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -161,7 +171,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={react} alt="react"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -171,7 +181,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={node} alt="node"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -181,7 +191,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={express} alt="express"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -191,7 +201,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={mdb} alt="mdb"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -201,7 +211,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={php} alt="php"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -211,7 +221,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={sql} alt="sql"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -221,7 +231,7 @@ function Main() {
                     transitionSpeed={1500}
                     glareEnable={true}
                     glareMaxOpacity={0.45}
-                    gyroscope={true}>
+                    >
                         <img src={python} alt="python"/>
                     </Tilt>
                 </div>
@@ -230,12 +240,12 @@ function Main() {
                 <p className="contact_head">Contact Me</p>
                 <p className="contact_txt">Want to make your bussiness online with website? Yeah Your on the right place. I can build your ideas into a perfect website with reasonable price. Your satisfaction is my priority. You can contact me through these below. </p>
                 <div className="contact_items">
-                <a href="mailto:muddana.yashwanth@gmail.com"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45} gyroscope={true} perspective={1000} >
+                <a href="mailto:muddana.yashwanth@gmail.com"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45}  perspective={1000} >
                     <img src={mail} alt="gmail"/>
                     <p>muddana.yashwanth@gmail.com</p>
                 </Tilt>
                 </a>
-                <a href="tel:9347451840"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45} gyroscope={true} perspective={1000} >
+                <a href="tel:9347451840"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45}  perspective={1000} >
                     <img src={call} alt="gmail"/>
                     <p>9347451840</p>
                 </Tilt></a>

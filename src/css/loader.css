@@ -22,8 +22,8 @@
 .loader_img {
   position: absolute;
   bottom: 0;
-  width: 500px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   left: 50%;
   transform: translateX(-75%);
 }
@@ -40,7 +40,7 @@
   .hello_txt {
     left: 57%;
     letter-spacing: 1px;
-    top: 35%;
+    top: 30%;
     font-size: 1.2em;
   }
   .loader {

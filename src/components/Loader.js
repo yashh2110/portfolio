@@ -1,6 +1,6 @@
 import React,{useRef,useEffect} from 'react'
 import "../css/loader.css"
-import loader_img from "../images/richie.svg";
+import loader_img from "../images/richie.png";
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger'
 function Loader() {
@@ -39,14 +39,14 @@ function Loader() {
         },"-=0.5")
         tl.to(welcome_txt_ref.current,{
             x:window.innerWidth * -1,
-        },"+=1")
+        },"-=1")
         tl.to(loader_img_ref.current,{
             opacity:0
         },"-=1");
         if(mql.matches){
             tl.to(loader_ref.current,{
-                y:window.innerHeight * -1,
-                duration:2
+                y:window.innerHeight * -1.1,
+                duration:1
             },"-=0.5");
         }else{
         tl.to(".loader_window",{
