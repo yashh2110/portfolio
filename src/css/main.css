@@ -32,8 +32,8 @@
 .home {
   position: relative;
   width: 100%;
+  min-height: -webkit-fill-available;
   height: 100%;
-  height: -webkit-fill-available;
   overflow: auto;
 }
 .main_info {

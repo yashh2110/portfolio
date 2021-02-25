@@ -9,6 +9,7 @@
 .app {
   position: relative;
   width: 100%;
+  min-height: -webkit-fill-available;
   height: auto;
   cursor: url("../images/cursor.svg"), auto;
   overflow-x: hidden;
