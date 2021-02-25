@@ -31,7 +31,7 @@
 .hello_txt {
   position: absolute;
   left: 55%;
-  top: 30%;
+  bottom: 450px;
   font-size: 2em;
   padding-right: 5px;
   /* font-family: "Akaya Kanadaka", cursive; */
@@ -39,9 +39,9 @@
 }
 @media screen and (max-width: 768px) {
   .hello_txt {
-    left: 57%;
-    letter-spacing: 1px;
-    top: 30%;
+    left: 50%;
+    text-align: right;
+    bottom: 450px;
     font-size: 1.2em;
   }
   .loader {
