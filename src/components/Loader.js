@@ -13,6 +13,8 @@ function Loader() {
     const name_txt_ref= useRef(null);
     const welcome_txt_ref= useRef(null);
     useEffect(()=>{
+        const vh = window.innerHeight * 1;
+        document.documentElement.style.setProperty('--vh','${vh}px');
         const mql = window.matchMedia('screen and (max-width: 768px)');
         const tl =gsap.timeline({ease:"power3"});
         tl.from(loader_img_ref.current,{
