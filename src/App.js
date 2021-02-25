@@ -9,9 +9,6 @@ function App() {
             <Loader/>
             <Nav />
             <Main />   
-            {/* <div ref={curser_ref} className="curser_dot"></div> */}
-            {/* <div ref={curser}  className="curser"> */}
-            {/* </div>  */}
         </div>
     )
 }
