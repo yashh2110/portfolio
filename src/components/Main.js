@@ -67,7 +67,7 @@ function Main() {
                 s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=1")
                 s_tl.to(".about",{y:-(window.innerHeight* 1),opacity:0,duration:8,ease:"linear"},"-=7")
                 s_tl.to(".skills",{y:-(window.innerHeight * 1),duration:8,ease:"linear"},"-=1")                
-                s_tl.fromTo(".contact",{y:window.innerHeight * 1.2},{y:0,duration:7,ease:"linear"},"-=1")
+                s_tl.fromTo(".contact",{y:window.innerHeight * 1},{y:-100,duration:7,ease:"linear"},"-=1")
             }else{
                 s_tl.to('.scroll-indicator',{opacity:0})
                 s_tl.to(".main_info",{x:window.innerWidth * -1,duration:2,ease:"linear"})
