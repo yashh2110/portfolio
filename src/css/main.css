@@ -21,8 +21,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-height: -webkit-fill-available;
-  height: 100vh;
+  @supports (-webkit-appearance: none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
   background-image: url("../images/background.jpg");
   background: rgba(0, 0, 0, 0.945);
   background-position: center center;
@@ -32,9 +35,13 @@
 .home {
   position: relative;
   width: 100%;
-  min-height: -webkit-fill-available;
-  height: 100%;
   overflow: auto;
+
+  @supports (-webkit-appearance: none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
 }
 .main_info {
   font-family: "Changa", sans-serif;
