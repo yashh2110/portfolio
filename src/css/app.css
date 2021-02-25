@@ -9,8 +9,8 @@
 .app {
   position: relative;
   width: 100%;
-  min-height: -webkit-fill-available;
-  height: auto;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   cursor: url("../images/cursor.svg"), auto;
   overflow-x: hidden;
 }
