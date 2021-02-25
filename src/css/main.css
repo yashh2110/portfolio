@@ -21,16 +21,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  @supports (-webkit-appearance: none) {
-    .os-android & {
-      min-height: calc(100vh - 56px);
-    }
-  }
+
   background-image: url("../images/background.jpg");
   background: rgba(0, 0, 0, 0.945);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  @supports (-webkit-appearance: none) {
+    .os-android & {
+      min-height: calc(100vh - 56px);
+    }
+  }
 }
 .home {
   position: relative;
