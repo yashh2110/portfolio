@@ -70,11 +70,11 @@ function Main() {
             }else{
                 s_tl.to('.scroll-indicator',{opacity:0})
                 s_tl.to(".main_info",{x:window.innerWidth * -1,duration:2,ease:"linear"})
-                s_tl.to(".profile",{x:-(window.innerWidth-600),scale:1.2,duration:2,ease:"linear"},"-=1");
-                s_tl.from(".about",{x:(window.innerWidth * 1),duration:2,ease:"linear"},"-=1")
-                s_tl.from(".about_head",{width:100,opacity:0,duration:2,ease:"linear"},"-=1")
-                s_tl.from(".about_txt",{x:window.innerWidth * 1,opacity:0,duration:2,ease:"linear"})
-                s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"+=5")
+                s_tl.to(".profile",{x:-(window.innerWidth-600),scale:1.2,duration:5,ease:"linear"},"-=1");
+                s_tl.from(".about",{x:(window.innerWidth * 1),duration:6,ease:"linear"},"-=1")
+                s_tl.from(".about_head",{width:100,opacity:0,duration:5,ease:"linear"},"-=1")
+                s_tl.from(".about_txt",{x:window.innerWidth * 1,opacity:5,duration:2,ease:"linear"})
+                s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"})
                 s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=5")
                 s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"power2"},"-=5")
                 s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power2"},"-=6")
