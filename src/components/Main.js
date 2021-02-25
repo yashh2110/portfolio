@@ -19,7 +19,6 @@ import prof from "../images/prof.svg"
 import down from "../images/down.svg"
 import mail from "../images/mail.svg"
 import call from "../images/call.svg"
-import Social from './Social';
 import Tilt from 'react-parallax-tilt';
 // import Skills from './skills';
 function Main() {
@@ -62,12 +61,12 @@ function Main() {
             // }
             // // s_tl.to(".main",{background:"#333",duration:2,ease:"linear"},"-=1")
             if(screen.matches){
-                s_tl.from(".about",{y:(window.innerHeight* 1),duration:5,ease:"linear"})
-                s_tl.to(".home",{y:-(window.innerHeight* 1),opacity:0,duration:6,ease:"linear"},"-=5")
-                s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=1")
-                s_tl.to(".about",{y:-(window.innerHeight* 1),opacity:0,duration:8,ease:"linear"},"-=7")
-                s_tl.to(".skills",{y:-(window.innerHeight * 1),duration:8,ease:"linear"},"-=1")                
-                s_tl.fromTo(".contact",{y:window.innerHeight * 1},{y:-(100-vh),duration:7,ease:"linear"},"-=1")
+                // s_tl.from(".about",{y:(window.innerHeight* 1),duration:5,ease:"linear"})
+                // s_tl.to(".home",{y:-(window.innerHeight* 1),opacity:0,duration:6,ease:"linear"},"-=5")
+                // s_tl.from(".skills",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=1")
+                // s_tl.to(".about",{y:-(window.innerHeight* 1),opacity:0,duration:8,ease:"linear"},"-=7")
+                // s_tl.to(".skills",{y:-(window.innerHeight * 1),duration:8,ease:"linear"},"-=1")                
+                // s_tl.fromTo(".contact",{y:window.innerHeight * 1},{y:-(100-vh),duration:7,ease:"linear"},"-=1")
             }else{
                 s_tl.to('.scroll-indicator',{opacity:0})
                 s_tl.to(".main_info",{x:window.innerWidth * -1,duration:2,ease:"linear"})
@@ -254,7 +253,6 @@ function Main() {
 
 
             </div>
-            <Social />
         </div>
     )
 }

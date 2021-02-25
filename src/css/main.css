@@ -264,6 +264,12 @@
   font-family: "Changa", sans-serif;
 }
 @media screen and (max-width: 1024px) {
+  .home {
+    position: relative;
+  }
+  .main {
+    overflow: auto;
+  }
   .main_info p {
     font-size: 1.5em;
     color: #fff;
@@ -290,7 +296,7 @@
   }
 
   .about {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,7 +305,7 @@
     background: rgb(14, 13, 13);
     left: 50%;
     width: 90%;
-    height: 100vh;
+    padding: 10px;
     transform: translate(-50%, 0);
     transform-style: preserve-3d;
     perspective: (1000px);
@@ -322,7 +328,7 @@
     text-align: center;
   }
   .skills {
-    position: absolute;
+    position: relative;
     height: auto;
   }
 
@@ -336,6 +342,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .contact {
+    position: relative;
   }
   .contact_txt {
     color: #fff;

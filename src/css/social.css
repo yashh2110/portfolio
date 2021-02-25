@@ -1,3 +1,8 @@
+.social {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+}
 .social ul {
   position: absolute;
   bottom: 0;
@@ -7,9 +12,6 @@
 .social li {
   margin: 5px;
 }
-.social {
-  padding: 10px;
-}
 @media screen and (max-width: 768px) {
   .social {
     padding: 5px;
@@ -17,5 +19,8 @@
   .social ul {
     justify-content: center;
     align-items: center;
+  }
+  .social-item img {
+    width: 25px;
   }
 }
