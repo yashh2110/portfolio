@@ -34,7 +34,6 @@
   width: 100%;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  overflow: auto;
 }
 .main_info {
   font-family: "Changa", sans-serif;
@@ -269,7 +268,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
   }
   .main_info p {
