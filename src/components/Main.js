@@ -81,7 +81,7 @@ function Main() {
                 s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"linear"},"-=7")
                 s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power2"},"-=6")
                 s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"},'-=5.7')
-                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=9")
+                s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=8")
             }
         },7000)
 
