@@ -19,6 +19,8 @@ import prof from "../images/prof.svg"
 import down from "../images/down.svg"
 import mail from "../images/mail.svg"
 import call from "../images/call.svg"
+import angular from "../images/angular.svg"
+import ionic from "../images/ionic.svg"
 import Tilt from 'react-parallax-tilt';
 // import Skills from './skills';
 function Main() {
@@ -33,7 +35,7 @@ function Main() {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
         // main txt word array
-        const words =[" Full Stack Web Developer."," UI/UX Designer."," Freelancer."," Student."];
+        const words =[" Full Stack Developer."," UI/UX Designer."," Freelancer."," Student."];
         gsap.to('.blinker',{opacity:0,duration:0.8,repeat:-1})
         const texttl = gsap.timeline({repeat:-1,delay:10});
         // gsap.from('.profile',{opacity:0,x: window.innerWidth * 1,scale:0,duration:2,ease:"back",delay:12})
@@ -78,7 +80,7 @@ function Main() {
                 s_tl.to(".about",{y:-(window.innerHeight * 1),duration:5,ease:"linear"},"-=5")
                 s_tl.to(".profile",{y:-(window.innerHeight * 1),duration:6.5,ease:"linear"},"-=7")
                 s_tl.from(".skill_item",{opacity:0,stagger:0.4,duration:6.5,ease:"power2"},"-=6")
-                s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"},'-=5')
+                s_tl.to(".skills",{y:-(window.innerHeight),duration:10,ease:"linear"},'-=5.7')
                 s_tl.from(".contact",{y:window.innerHeight * 1,duration:7,ease:"linear"},"-=10")
             }
         },7000)
@@ -109,7 +111,7 @@ function Main() {
             </div>
             <div className="about" >
                 <p className="about_head">About Me</p>
-                <p className="about_txt" id="about">Hi, I am Yashwanth Muddana, I am a full stack web developer, UI/UX designer, and a freelancer, I am enthusiastic towards growing technologies, I am very happy to connect the bridge between people by making businesses online. I am highly experienced in designing websites and developing them, I am looking forward to work with any who makes the day to day life better. I am learning app development and I am very much intrested in artificial intelligence. I am a 2nd year student at VIT University Vellore India. </p>
+                <p className="about_txt" id="about">Hi, I am Yashwanth Muddana, I am a full stack web developer, UI/UX designer, and a freelancer. Currently I am a full stack developer working for Ideal business solutions which is a startup with great idea and ideology. I am enthusiastic towards growing technologies, I am very happy to connect the bridge between people by making businesses online. I am highly experienced in designing websites and developing them, I am looking forward to work with any who makes the day to day life better.I am a 2nd year student at VIT University Vellore India. </p>
             </div>
             <div className="skills" id="skills">
                 <p className="skill_head">Skills</p>
@@ -182,6 +184,26 @@ function Main() {
                     glareEnable={true}
                     glareMaxOpacity={0.45}
                     >
+                        <img src={angular} alt="angular"/>
+                    </Tilt>
+                    <Tilt className="skill_item "     
+                    tiltMaxAngleX={30}
+                    tiltMaxAngleY={30}
+                    perspective={800}
+                    transitionSpeed={1500}
+                    glareEnable={true}
+                    glareMaxOpacity={0.45}
+                    >
+                        <img src={ionic} alt="ionic"/>
+                    </Tilt>
+                    <Tilt className="skill_item "     
+                    tiltMaxAngleX={30}
+                    tiltMaxAngleY={30}
+                    perspective={800}
+                    transitionSpeed={1500}
+                    glareEnable={true}
+                    glareMaxOpacity={0.45}
+                    >
                         <img src={node} alt="node"/>
                     </Tilt>
                     <Tilt className="skill_item "     
@@ -234,6 +256,7 @@ function Main() {
                     >
                         <img src={python} alt="python"/>
                     </Tilt>
+                    
                 </div>
             </div>
             <div className="contact">
@@ -250,7 +273,7 @@ function Main() {
                     <p>9347451840</p>
                 </Tilt></a>
                 </div>
-
+                <div style={{"textAlign":"center","color":"lightgrey","marginTop":"100px","fontFamily":"'Changa', sans-serif"}}>Designed And Developed By Yashwanth Muddana</div>
 
             </div>
         </div>
