@@ -227,8 +227,8 @@
   margin-top: 100px;
 }
 .contact_item {
-  width: 300px;
-  background-color: rgba(255, 255, 255, 0.103);
+  width: 320px;
+  background-color: rgba(29, 29, 29, 0.103);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -246,13 +246,15 @@
   width: 100px;
   height: 100px;
 }
-.contact_item p {
+.contact_item span {
   color: #fff;
   font-family: "Changa", sans-serif;
   padding: 10px;
+  text-align: center;
+  width:100%;
+  text-overflow: ellipsis;
   transform: translateZ(60px);
-  font-size: 1.1em;
-  width: 290px;
+  font-size: 1rem;
 }
 .copy {
   position: absolute;

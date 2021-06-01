@@ -265,16 +265,15 @@ function Main() {
                 <div className="contact_items">
                 <a href="mailto:muddana.yashwanth@gmail.com"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45}  perspective={1000} >
                     <img src={mail} alt="gmail"/>
-                    <p>muddana.yashwanth@gmail.com</p>
+                    <span>muddana.yashwanth@gmail.com</span>
                 </Tilt>
                 </a>
                 <a href="tel:9347451840"><Tilt className="contact_item" glareEnable={true} glareMaxOpacity={0.45}  perspective={1000} >
                     <img src={call} alt="gmail"/>
-                    <p>9347451840</p>
+                    <span>9347451840</span>
                 </Tilt></a>
                 </div>
                 <div style={{"textAlign":"center","color":"lightgrey","marginTop":"80px","fontFamily":"'Changa', sans-serif"}}>Designed And Developed By Yashwanth Muddana</div>
-
             </div>
         </div>
     )
