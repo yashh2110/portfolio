@@ -252,7 +252,7 @@
   padding: 10px;
   transform: translateZ(60px);
   font-size: 1.1em;
-  max-width: 290px;
+  width: 290px;
 }
 .copy {
   position: absolute;
