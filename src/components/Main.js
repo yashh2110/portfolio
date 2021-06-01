@@ -273,7 +273,7 @@ function Main() {
                     <p>9347451840</p>
                 </Tilt></a>
                 </div>
-                <div style={{"textAlign":"center","color":"lightgrey","marginTop":"100px","fontFamily":"'Changa', sans-serif"}}>Designed And Developed By Yashwanth Muddana</div>
+                <div style={{"textAlign":"center","color":"lightgrey","marginTop":"80px","fontFamily":"'Changa', sans-serif"}}>Designed And Developed By Yashwanth Muddana</div>
 
             </div>
         </div>
